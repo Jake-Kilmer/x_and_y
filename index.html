@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>X & Y Bar Graph</title>
+    <style type="text/css" rel="stylesheet">
+      @keyframes colorChanger {
+        0% {
+          background-color: #429dff;
+        }
+        40% {
+          background-color: #196dc7;
+        }
+        90% {
+          background-color: #429dff;
+        }
+        100% {
+          background-color: #429dff;
+        }
+      }
+      html {
+        color: #000;
+        position: relative;
+        height: 100%;
+        animation-name: colorChanger;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+      }
+      body {
+        position: relative;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+      h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 45px;
+        text-transform: uppercase;
+        padding: 0 0 20px 0;
+        margin: 0 auto 60px auto;
+        text-shadow: 2px 2px 10px #000;
+      }
+      h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0 0 50px 0;
+      }
+      #setUpForm {
+        text-align: center;
+        display: block;
+        max-width: 95%;
+        margin: 0px auto;
+      }
+      .setUpBox {
+        display: inline-block;
+        width: calc(50% - 10px);
+        vertical-align: top;
+      }
+      .inputBox {
+        display: inline-block;
+        width: calc(100%/7 - 4px);
+        vertical-align: top;
+      }
+      .setUpBox .inputBox {
+        width: calc(100%/2 - 30px);
+        margin: 0 10px;
+      }
+      #setUpForm label {
+        display: block;
+        text-align: left;
+        font-size: 22px;
+        padding: 0 0 10px 0;
+      }
+      #setUpForm input {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border: 0;
+        background-color: #fff;
+        outline: 0;
+        font-size: 18px;
+        color: #000;
+        padding: 10px;
+        margin: 0 0 20px 0;
+      }
+      #setUpForm .setUpBox input {
+        margin: 0;
+      }
+      #setUpForm #submitData {
+        background-color: red;
+        color: #fff;
+        text-transform: uppercase;
+        display: block;
+        font-size: 25px;
+        transition: .3s;
+        -webkit-transition: .3s;
+        margin: 40px auto;
+        max-width: 400px;
+      }
+      #setUpForm #submitData:hover {background-color: #585050; cursor: pointer;}
+    </style>
+  </head>
+  <body>
+    <h1>X & Y Bar Graph</h1>
+    <h2>Enter your units.</h2>
+    <form id="setUpForm" method="POST" action="setUp.html">
+      <div class="setUpBox1 setUpBox">
+        <div class="inputBox">
+          <label>X units name</label>
+          <input id="inputXUnits" type="text" name="XUnits">
+        </div>
+        <div class="inputBox">
+          <label>X units total</label>
+          <select id="inputXTotal"></select>
+        </div>
+      </div><!-- setUpBox1 -->
+      <div class="setUpBox1 setUpBox">
+        <div class="inputBox">
+          <label>Y units name</label>
+          <input id="inputYUnits" type="text" name="YUnits">
+        </div>
+        <div class="inputBox">
+          <label>Y units total</label>
+          <select id="inputYTotal"></select>
+        </div>
+      </div><!-- setUpBox2 -->
+      <div class="inputBox">
+        <input id="submitData" type="submit" name="submit data">
+      </div>
+    </form>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
