@@ -23,7 +23,6 @@ function graphIt() {
   }
 
   var currentcookies = document.cookie;
-  console.log(currentcookies);
 
   var xAxisName = getCookie("xUnitsName");
   var yAxisName = getCookie("yUnitsName");
@@ -34,6 +33,7 @@ function graphIt() {
   var xNameText = document.createTextNode(xAxisName);
   var yNameText = document.createTextNode(yAxisName);
   var yTotalText = document.createTextNode(yAxisTotal);
+
 
   xNodeName.appendChild(xNameText);
   yNodeName.appendChild(yNameText);
@@ -70,7 +70,7 @@ function graphIt() {
     }
 
     setTimeout(function(){
-      window.location = ("http://www.jakekilmer.com/projects/x_and_y/results.html");
+      window.location = ("http://localhost/Remlik_Apps/x_and_y/results.html");
     }, 200);
   }
 

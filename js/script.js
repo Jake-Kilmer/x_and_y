@@ -72,9 +72,10 @@ function graphIt() {
     setCookie("xUnitsTotal", xUnitsTotal);
     setCookie("yUnitsName", yUnitsName);
     setCookie("yUnitsTotal", yUnitsToal);
-
+    
+    
     setTimeout(function(){
-      window.location = ("http://www.jakekilmer.com/projects/x_and_y/setUp.html");
+      window.location = ("http://localhost/Remlik_Apps/x_and_y/setUp.html");
     }, 200);
   }
 
