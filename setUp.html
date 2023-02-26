@@ -21,7 +21,7 @@
         }
       }
       html {
-        color: #707d8b;
+        color: #303f4f;
         position: relative;
         font-size: 25px;
         font-family: 'Raleway', sans-serif;
@@ -30,8 +30,23 @@
         /*animation-duration: 15s;*/
         /*animation-iteration-count: infinite;*/
       }
+      html:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        background-position: center 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-image: url(img/ocean-background.webp);
+        background-size: cover;
+        z-index: 5;
+      }
       body {
         margin: 0;
+        position: relative;
         box-sizing: border-box;
         /*position: relative;*/
         /*margin: 0;*/
@@ -42,6 +57,7 @@
         height: 100%;
         display: table;
         padding: 20px;
+        z-index: 7;
       }
       .sxn-main {
         max-width: 1000px;
@@ -85,6 +101,7 @@
       }
       #graphingForm label {
         display: block;
+        color: #fff;
         text-align: left;
         font-size: 18px;
         padding: 0 0 10px 0;
@@ -96,10 +113,10 @@
         border: 0;
         background-color: transparent;
         border-radius: 3px;
-        border: 1px solid #c8c9ca;
+        border: 1px solid #303f4f;
         outline: 0;
         font-size: 18px;
-        color: #707d8b;
+        color: #303f4f;
         padding: 5px 10px;
         margin: 0 0 20px 0;
       }
@@ -119,8 +136,19 @@
         margin: 40px auto;
       }
       #graphingForm #submitData:hover {background-color: #3eb2f5; cursor: pointer;}
+      .footerName {
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        color: #2195d8;
+        font-family: arial;
+        text-align: center;
+      }
+      .footerName a {
+        color: #2195d8
+      }
     </style>
-    <title>X & Y Bar Graph</title>
+    <title>X & Y Bar Graph 2.0</title>
   </head>
   <body>
     <!-- <h1>X & Y Bar Graph</h1> -->
@@ -131,6 +159,7 @@
         </div>
         <input id="submitData" type="submit" name="submit data" value="next">
       </form>
+      <span class="footerName">X & Y Bar Graph 2.0 built by <a href="https://www.jakeKilmer.com" target="_blank">Kilmer</a> &#169; 2023</span>
     </div>
     <script type="text/javascript" src="js/setUp.js?t=2022"></script>
   </body>

@@ -5,8 +5,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <title>Weekly Results</title>
+    <title>X & Y Bar Graph 2.0</title>
     <style>
+      html {
+        color: #303f4f;
+        position: relative;
+        font-size: 25px;
+        font-family: 'Raleway', sans-serif;
+        height: 100%;
+        /*animation-name: colorChanger;*/
+        /*animation-duration: 15s;*/
+        /*animation-iteration-count: infinite;*/
+      }
       @keyframes colorChanger {
         0% {
           background-color: #429dff;
@@ -21,15 +31,19 @@
           background-color: #429dff;
         }
       }
-      html {
-        color: #707d8b;
-        position: relative;
-        font-size: 25px;
-        font-family: 'Raleway', sans-serif;
+      html:before {
+        content: "";
+        display: block;
+        background-position: center 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 100%;
-        /*animation-name: colorChanger;*/
-        /*animation-duration: 15s;*/
-        /*animation-iteration-count: infinite;*/
+        background-repeat: no-repeat;
+        background-image: url(img/ocean-background.webp);
+        background-size: cover;
+        z-index: 5;
       }
       body {
         padding: 25px 20px 65px 20px;
@@ -39,6 +53,7 @@
         width: 100%;
         box-sizing: border-box;
         height: 100%;
+        z-index: 7;
       }
       .sxn-main {
         max-width: 1000px;
@@ -94,7 +109,7 @@
         margin: 0;
         padding: 10px 10px;
         box-sizing: border-box;
-        color: #000;
+        color: #fff;
       }
       #yListName {
         text-align: center;
@@ -216,8 +231,19 @@
         .yListItem:nth-child(even) {
           background-color: #ccc;
         }
-        #barGraphWrap {color: #707d8b;}
+        #barGraphWrap {color: #303f4f;}
         .back {display: none;}
+      }
+      .footerName {
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        color: #053f61;
+        font-family: arial;
+        text-align: center;
+      }
+      .footerName a {
+        color: #053f61;
       }
     </style>
   </head>
@@ -240,6 +266,7 @@
       <h2 id="yListName"></h2>
     </div>
     <a class="back" href="./">New Graph</a>
+    <span class="footerName">X & Y Bar Graph 2.0 built by <a href="https://www.jakeKilmer.com" target="_blank">Kilmer</a> &#169; 2023</span>
     <script type="text/javascript" src="js/results.js?t=2022"></script>
   </body>
 </html>
