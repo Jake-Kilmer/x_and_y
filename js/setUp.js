@@ -70,7 +70,7 @@ function graphIt() {
     }
 
     setTimeout(function(){
-      window.location = ("http://localhost/Remlik_Apps/x_and_y/results.html");
+      window.location = ("./results.html");
     }, 200);
   }
 

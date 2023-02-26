@@ -75,7 +75,7 @@ function graphIt() {
     
     
     setTimeout(function(){
-      window.location = ("http://localhost/Remlik_Apps/x_and_y/setUp.html");
+      window.location = ("./setUp.html");
     }, 200);
   }
 

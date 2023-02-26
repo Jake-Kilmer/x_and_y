@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <title>Weekly Results</title>
     <style>
       @keyframes colorChanger {
@@ -18,34 +22,49 @@
         }
       }
       html {
-        color: #000;
+        color: #707d8b;
         position: relative;
+        font-size: 25px;
+        font-family: 'Raleway', sans-serif;
         height: 100%;
-        animation-name: colorChanger;
-        animation-duration: 15s;
-        animation-iteration-count: infinite;
+        /*animation-name: colorChanger;*/
+        /*animation-duration: 15s;*/
+        /*animation-iteration-count: infinite;*/
       }
       body {
+        padding: 25px 20px 65px 20px;
         position: relative;
-        padding: 25px 45px 45px 45px;
+        /* padding: 25px 45px 45px 45px; */
         margin: 0;
         width: 100%;
         box-sizing: border-box;
         height: 100%;
       }
-      #barGraphWrap {
-        color: #fff;
-        position: relative;
-        height: 100%;
+      .sxn-main {
+        max-width: 1000px;
+        margin: 0px auto;
       }
       h1 {
-        color: #fff;
         text-align: center;
-        font-size: 45px;
-        text-shadow: 2px 2px 10px #000;
+        font-size: 25px;
         text-transform: uppercase;
         padding: 0 0 20px 0;
-        margin: 0 auto 100px auto;
+        margin: 0 auto 40px auto;
+      }
+      h2 {
+        font-size: 23px;
+        margin: 0;
+        padding: 0 0 30px 0;
+      }
+      h3 {
+        font-size: 20px;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+      }
+      #barGraphWrap {
+        position: relative;
+        height: 100%;
       }
       #barGraphCont {
         position: relative;
@@ -101,6 +120,7 @@
       }
       .xListItem span {
         position: absolute;
+        color: #000;
         right: 5px;
         top: 5px;
         font-size: 1.5vh;
@@ -125,23 +145,28 @@
       }
       .yListItem {
         display: inline-block;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
         vertical-align: bottom;
         position: relative;
+        height: 0px;
         border-bottom: 1px solid #000;
+        transition: height .8s ease;
       }
       .yListItem:nth-child(odd) {
-        background-color: #ea3636;
+        background-color: #3eb2f5
       }
       .yListItem:nth-child(even) {
-        background-color: #b90a28;
+        background-color: #2195d8;
       }
       .yListItem span {
         position: absolute;
         right: 5px;
         bottom: 0;
         font-size: 1.5vw;
+        color: #000;
       }
       .yListItem span.amount {
+        display: none;
         bottom: inherit;
         top: 0;
         width: 100%;
@@ -163,12 +188,13 @@
         bottom: 0;
         left: 50%;
         display: block;
-        max-width: 200px;
+        box-sizing: border-box;
+        width: 180px;
         border: 0;
         font-size: 18px;
-        padding: 10px;
-        margin: 0 0 0 -68px;
-        background-color: #585050;
+        padding: 10px 30px;
+        margin: 0 0 0 -90px;
+        background-color: #2195d8;
         text-align: center;
         text-decoration: none;
         color: #fff;
@@ -177,7 +203,7 @@
         -webkit-transition: .3s;
       }
       .back:hover {
-        background-color: #d22a2a;
+        background-color: #3eb2f5;
         cursor: pointer;
       }
       @media print {
@@ -190,7 +216,7 @@
         .yListItem:nth-child(even) {
           background-color: #ccc;
         }
-        #barGraphWrap {color: #000;}
+        #barGraphWrap {color: #707d8b;}
         .back {display: none;}
       }
     </style>
@@ -213,7 +239,7 @@
       </div><!-- barGraphCont -->
       <h2 id="yListName"></h2>
     </div>
-    <a class="back" href="https://www.jakekilmer.com/projects/x_and_y/">New Graph!</a>
-    <script type="text/javascript" src="js/results.js?t=2021"></script>
+    <a class="back" href="./">New Graph</a>
+    <script type="text/javascript" src="js/results.js?t=2022"></script>
   </body>
 </html>
